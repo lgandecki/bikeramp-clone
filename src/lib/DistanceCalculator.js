@@ -5,17 +5,13 @@ const distanceCalculator = async function (address, destination, fetch = require
   `&origins=${encodeURIComponent(address)}&destinations=${encodeURIComponent(destination)}`
 
   const url = `${endPoint}${params}`
-  let data
-  let parsed
 
-  try {
-    data = await fetch(url)
-    parsed = await data.json()
-  } catch (e) {
-    throw new Error(e)
-  }
+    const data = await fetch(url)
+    const json = await data.json()
 
-  return parsed.rows[0].elements[0].distance.text
+
+  return json.rows[0].elements[0].distance.value
 }
+
 
 module.exports = distanceCalculator
