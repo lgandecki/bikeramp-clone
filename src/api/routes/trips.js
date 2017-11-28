@@ -1,6 +1,4 @@
 const addTrip = require('../lib/addTrip');
-const distanceCalculator = require('../lib/distanceCalculator')
-const TripsRepository = require('../lib/TripsRepository').default
 
 module.exports = (app) => {
   app.post('/api/trips', async (req, res) => {
@@ -11,7 +9,7 @@ module.exports = (app) => {
       price,
       date
     }
-    await addTrip(data, distanceCalculator, TripsRepository)
+    await addTrip(data)
     res.end();
   });
 };
