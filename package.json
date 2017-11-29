@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node ./src/index.js",
     "test": "RUN_SLOW=true jest",
-    "test:endtoend": "./node_modules/.bin/cucumberjs"
+    "test:endtoend": "./node_modules/.bin/cucumberjs --format node_modules/cucumber-pretty"
   },
   "author": "",
   "private": true,
@@ -17,12 +17,13 @@
   "devDependencies": {
     "axios": "^0.17.1",
     "chai": "^4.1.2",
+    "cucumber": "^3.1.0",
+    "cucumber-pretty": "0.0.5",
     "jest": "^21.2.1",
     "standard": "^10.0.3",
     "testdouble": "^3.2.6"
   },
   "dependencies": {
-    "cucumber": "^3.1.0",
     "express": "^4.16.2",
     "lodash": "^4.17.4",
     "moment": "^2.19.2",
