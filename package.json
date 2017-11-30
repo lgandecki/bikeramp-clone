@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node ./src/index.js",
     "test": "RUN_SLOW=true jest",
-    "test:endtoend": "./node_modules/.bin/cucumberjs --format node_modules/cucumber-pretty"
+    "test:endtoend": "cucumberjs --format node_modules/cucumber-pretty"
   },
   "author": "",
   "private": true,
